@@ -28,23 +28,23 @@ const app = express()
 
 const PORT = process.env.PORT || 5000
 
-// app.use(
-//     cors({
-//         // origin: "http://localhost:5173",
-//         origin: "https://e-commerce-frontend-tbka.onrender.com",
+app.use(
+    cors({
+        // origin: "http://localhost:5173",
+        origin: "https://e-commerce-frontend-tbka.onrender.com",
 
-//         methods: ["GET", "POST", "DELETE", "PUT"],
-//         allowedHeaders: [
-//             "Content-Type",
-//             "Authorization",
-//             "Cache-Control",
-//             "Expries",
-//             "Pragma"
-//         ],
-//         credentials: true
-//     })
-// )
-app.use(cors())
+        methods: ["GET", "POST", "DELETE", "PUT"],
+        allowedHeaders: [
+            "Content-Type",
+            "Authorization",
+            "Cache-Control",
+            "Expries",
+            "Pragma"
+        ],
+        credentials: true
+    })
+)
+
 
 app.use(cookieParser())
 app.use(express.json())
