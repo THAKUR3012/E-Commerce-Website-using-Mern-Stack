@@ -17,12 +17,12 @@ export const fetchAllFilterProducts = createAsyncThunk("/products/fetchAllFilter
         ...filterParams,
         sortBy: sortParams
     })
-    const result = await axios.get(`http://localhost:5000/api/v1/shop/get?${query}`);
+    const result = await axios.get(`https://e-commerce-y8a7.onrender.com/api/v1/shop/get?${query}`);
     return result?.data
 })
 
 export const fetchProductDetails = createAsyncThunk("/products/fetchProductDetails", async (id) => {
-    const result = await axios.get(`http://localhost:5000/api/v1/shop/get/${id}`);
+    const result = await axios.get(`https://e-commerce-y8a7.onrender.com/api/v1/shop/get/${id}`);
     return result?.data
 })
 

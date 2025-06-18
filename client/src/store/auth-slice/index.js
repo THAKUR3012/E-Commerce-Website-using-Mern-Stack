@@ -11,7 +11,7 @@ export const registerUser = createAsyncThunk(
     "/auth/register",
     async (formData) => {
         const response = await axios.post(
-            "http://localhost:5000/api/v1/auth/register",
+            "https://e-commerce-y8a7.onrender.com/api/v1/auth/register",
             formData,
             { withCredentials: true }
         );
@@ -21,7 +21,7 @@ export const registerUser = createAsyncThunk(
 
 export const loginUser = createAsyncThunk("/auth/login", async (formData) => {
     const response = await axios.post(
-        "http://localhost:5000/api/v1/auth/login",
+        "https://e-commerce-y8a7.onrender.com/api/v1/auth/login",
         formData,
         { withCredentials: true }
     );
@@ -30,7 +30,7 @@ export const loginUser = createAsyncThunk("/auth/login", async (formData) => {
 
 export const logoutUser = createAsyncThunk("/auth/logout", async () => {
     const response = await axios.post(
-        "http://localhost:5000/api/v1/auth/logout",
+        "https://e-commerce-y8a7.onrender.com/api/v1/auth/logout",
         {},
         { withCredentials: true }
     );
@@ -38,7 +38,7 @@ export const logoutUser = createAsyncThunk("/auth/logout", async () => {
 });
 
 export const checkAuth = createAsyncThunk("/auth/checkauth", async () => {
-    const response = await axios.get("http://localhost:5000/api/v1/auth/check-auth", {
+    const response = await axios.get("https://e-commerce-y8a7.onrender.com/api/v1/auth/check-auth", {
         withCredentials: true,
         headers: {
             "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",

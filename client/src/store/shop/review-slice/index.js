@@ -11,7 +11,7 @@ export const addReview = createAsyncThunk(
     async (formdata) => {
         console.log(formdata)
         const response = await axios.post(
-            `http://localhost:5000/api/v1/review/add`,
+            `https://e-commerce-y8a7.onrender.com/api/v1/review/add`,
             formdata
         );
 
@@ -21,7 +21,7 @@ export const addReview = createAsyncThunk(
 
 export const getReviews = createAsyncThunk("/order/getReviews", async (id) => {
     const response = await axios.get(
-        `http://localhost:5000/api/v1/review/${id}`
+        `https://e-commerce-y8a7.onrender.com/api/v1/review/${id}`
     );
 
     return response.data;

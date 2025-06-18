@@ -9,7 +9,7 @@ const initialState = {
 }
 
 export const addProduct = createAsyncThunk("products/addProduct", async (formData) => {
-    const result = await axios.post("http://localhost:5000/api/v1/admin/add", formData, {
+    const result = await axios.post("https://e-commerce-y8a7.onrender.com/api/v1/admin/add", formData, {
         headers: {
             "Content-Type": "application/json"
         }
@@ -18,13 +18,13 @@ export const addProduct = createAsyncThunk("products/addProduct", async (formDat
 })
 
 export const fetchAllProduct = createAsyncThunk("products/fetchAllProduct", async () => {
-    const result = await axios.get("http://localhost:5000/api/v1/admin/get")
+    const result = await axios.get("https://e-commerce-y8a7.onrender.com/api/v1/admin/get")
     return result?.data
 })
 
 export const editProduct = createAsyncThunk("products/editProduct",
     async ({ id, formData }) => {
-        const result = await axios.put(`http://localhost:5000/api/v1/admin/edit/${id}`, formData, {
+        const result = await axios.put(`https://e-commerce-y8a7.onrender.com/api/v1/admin/edit/${id}`, formData, {
             headers: {
                 "Content-Type": "application/json",
             },
@@ -36,7 +36,7 @@ export const editProduct = createAsyncThunk("products/editProduct",
 export const deleteProduct = createAsyncThunk(
     "products/deleteProduct",
     async (id) => {
-        const result = await axios.delete(`http://localhost:5000/api/v1/admin/delete/${id}`);
+        const result = await axios.delete(`https://e-commerce-y8a7.onrender.com/api/v1/admin/delete/${id}`);
         return result.data;
     }
 );

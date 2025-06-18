@@ -30,7 +30,7 @@ const ProductImageUpload = ({
     data.append("my_file", imageFile); // matches upload.single("my_file")
 
     const response = await axios.post(
-      "http://localhost:5000/api/v1/admin/upload-image",
+      "https://e-commerce-y8a7.onrender.com/api/v1/admin/upload-image",
       data
     );
 

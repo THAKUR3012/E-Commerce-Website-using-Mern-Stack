@@ -12,7 +12,7 @@ const initialState = {
 export const createNewOrder = createAsyncThunk(
     "/order/createNewOrder",
     async (orderData) => {
-        const response = await axios.post("http://localhost:5000/api/v1/order/create", orderData);
+        const response = await axios.post("https://e-commerce-y8a7.onrender.com/api/v1/order/create", orderData);
         return response.data;
     }
 );
@@ -21,7 +21,7 @@ export const capturePayment = createAsyncThunk(
     "/order/capturePayment",
     async ({ paymentId, payerId, orderId }) => {
         const response = await axios.post(
-            "http://localhost:5000/api/v1/order/capture",
+            "https://e-commerce-y8a7.onrender.com/api/v1/order/capture",
             {
                 paymentId,
                 payerId,
@@ -37,7 +37,7 @@ export const getAllOrdersByUserId = createAsyncThunk(
     "/order/getAllOrdersByUserId",
     async (userId) => {
         const response = await axios.get(
-            `http://localhost:5000/api/v1/order/list/${userId}`
+            `https://e-commerce-y8a7.onrender.com/api/v1/order/list/${userId}`
         );
 
         return response.data;
@@ -48,7 +48,7 @@ export const getOrderDetails = createAsyncThunk(
     "/order/getOrderDetails",
     async (id) => {
         const response = await axios.get(
-            `http://localhost:5000/api/v1/order/details/${id}`
+            `https://e-commerce-y8a7.onrender.com/api/v1/order/details/${id}`
         );
 
         return response.data;
